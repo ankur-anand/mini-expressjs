@@ -1,10 +1,14 @@
 const miniExpress = require("../");
 const app = miniExpress();
 
+app.put("/", function(req, res) {
+  res.send("put Hello World!");
+});
+
 app.get("/", function(req, res) {
-  res.send("Hello World");
+  res.send("get Hello World!");
 });
 
 app.listen(3000, function() {
-  console.log("First Version of the miniExpress is running on PORT 3000");
+  console.log("Second Version of the miniExpress is running on PORT 3000");
 });
